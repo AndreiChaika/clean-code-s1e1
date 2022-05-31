@@ -4,19 +4,19 @@ body {
   color: #333;
   font-family: Lato, sans-serif;
 }
-header {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
-header img {
+.header img {
   width: 100%;
 }
-header .more {
+.header .more {
   font-family: fantasy, cursive;
 }
-main {
+.main {
   display: block;
   width: 500px;
   margin: 0 auto;
@@ -86,7 +86,7 @@ label[for="new-task"] {
   display: block;
   margin: 0 0 20px;
 }
-input#new-task {
+#new-task {
   width: 318px;
 }
 
@@ -124,7 +124,7 @@ button.main__button_delete img:hover {
 }
 
 /* Completed */
-ul#completed-tasks label {
+#completed-tasks label {
   text-decoration: line-through;
   color: #888;
 }
@@ -144,7 +144,7 @@ ul li.main__todo_edit label {
 /* Adaptive Design */
 @media (max-width:768px) {
   
-  header {
+  .header {
     text-align: center;
   }
 
