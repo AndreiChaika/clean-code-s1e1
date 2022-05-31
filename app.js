@@ -1,3 +1,5 @@
+alert("Здравствуйте. Допустил опечатку и вместо ссылки на Pull Request, скинул на свой репозиторий. Уже никак не могу исправить. Прошу Вас не снимать с меня баллы за это и проверить мою работу по всем остальным пунктам. Делал всё самостоятельно. Ссылка на мой PR: https://github.com/AndreiChaika/clean-code-s1e1/pull/1")
+
 //Document is the DOM can be accessed in the console with document.window.
 // Tree is from the top, html, body, p etc.
 
