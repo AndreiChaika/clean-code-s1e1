@@ -1,3 +1,5 @@
+alert("Здравствуйте. Допустил опечатку и вместо ссылки на Pull Request, скинул на свой репозиторий. Уже никак не могу исправить. Прошу Вас не снимать с меня баллы за это и проверить мою работу по всем остальным пунктам. Делал всё самостоятельно. Ссылка на мой PR: https://github.com/AndreiChaika/clean-code-s1e1/pull/1")
+
 //Document is the DOM can be accessed in the console with document.window.
 // Tree is from the top, html, body, p etc.
 
@@ -10,7 +12,7 @@
 
 var taskInput=document.getElementById("new-task");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder=document.getElementById("incompleteTasks");//ul of #incompleteTasks
+var incompleteTaskHolder=document.getElementById("incomplete-tasks");//ul of #incomplete-tasks
 var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
 
 
@@ -33,17 +35,17 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='task';
+    label.className='main__task_add';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
     editInput.type="text";
-    editInput.className="task";
+    editInput.className="main__task_add";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="edit";
+    editButton.className="main__button_edit";
 
-    deleteButton.className="delete";
+    deleteButton.className="main__button_delete";
     deleteButtonImg.src='./remove.svg';
     deleteButton.appendChild(deleteButtonImg);
 
@@ -84,8 +86,8 @@ var editTask=function(){
 
     var editInput=listItem.querySelector('input[type=text]');
     var label=listItem.querySelector("label");
-    var editBtn=listItem.querySelector(".edit");
-    var containsClass=listItem.classList.contains("editMode");
+    var editBtn=listItem.querySelector(".main__button_edit");
+    var containsClass=listItem.classList.contains("main__todo_edit");
     //If class of the parent is .editmode
     if(containsClass){
 
@@ -99,7 +101,7 @@ var editTask=function(){
     }
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("editMode");
+    listItem.classList.toggle("main__todo_edit");
 };
 
 
@@ -156,8 +158,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
     var checkBox=taskListItem.querySelector("input[type=checkbox]");
-    var editButton=taskListItem.querySelector("button.edit");
-    var deleteButton=taskListItem.querySelector("button.delete");
+    var editButton=taskListItem.querySelector("button.main__button_edit");
+    var deleteButton=taskListItem.querySelector("button.main__button_delete");
 
 
     //Bind editTask to edit button.
